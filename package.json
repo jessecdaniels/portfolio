@@ -1,0 +1,12 @@
+{
+  "name": "my-cool-package",
+  "version": "1.0.0",
+  "description": "my first custom package",
+  "main": "dist/main.js",
+  "author": "Jesse Daniels",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "node-sass": "^6.0.0"
+  }
+}
