@@ -67,13 +67,29 @@ header p {
 
 main {
   margin: auto;
-  max-width: 800px;
 }
 
 figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+
+figure:first-of-type {
+  width: 80%;
+  max-width: 80%;
+  background-color: #8dc6ff;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 15px;
 }
 
 figure img {
@@ -84,6 +100,7 @@ figure img {
 
 figcaption {
   text-align: left;
+  max-width: 400px;
 }
 
 .infobox img {
@@ -92,9 +109,23 @@ figcaption {
   border: red, 50px;
 }
 
+@media screen and (max-width: 600px) {
+  figure {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .headshot {
   margin-bottom: 50px;
   border-radius: 10px;
+}
+
+.horoscopes {
+  padding-top: 400px;
+  margin-top: -400px;
 }
 
 footer {
@@ -112,6 +143,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+h3 {
+  visibility: hidden;
 }
 
 h1 {
