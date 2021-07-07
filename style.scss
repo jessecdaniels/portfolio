@@ -41,15 +41,27 @@ header p {
     0%   {background-color:red; left:0px; top:0px;}
     25% {background-color:rgb(55, 0, 255); left:0px; top:0px;} 
     100%  {background-color:yellow; left:100px; top:0px;}
- 
   }
 
 main {
   margin: auto;
-  max-width: 800px;
+  
 }
 figure {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+figure:first-of-type{
+  width: 80%;
+  max-width: 80%;
+  background-color: rgb(141, 198, 255);
+  font-size: 20px;
+
+  padding: 5px;
+  border-radius: 15px;
 }
 figure img {
   width: 400px;
@@ -58,18 +70,28 @@ figure img {
 }
 figcaption {
   text-align: left;
+  max-width: 400px;
 }
 .infobox img {
   margin: 10 auto;
   border-radius: 50px;
   border:rgb(255, 0, 0), 50px;
-
-
 }
+
+@media screen and (max-width: 600px){
+figure{flex-direction: column;}
+}
+
 .headshot {
   margin-bottom: 50px;
   border-radius: 10px;
 }
+
+.horoscopes {
+  padding-top: 400px;
+  margin-top: -400px;
+}
+
 
 footer {
     margin-top: 100px;
@@ -80,6 +102,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h3 {
+  visibility: hidden;
 }
 
   h1 {	
