@@ -29,18 +29,19 @@ header p {
   font-size: 20px;
   text-transform: uppercase;
 	text-decoration: none;
-  height: 25px;
+  height: 50px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px #9d9d9d;
   
   position: relative;
-  animation: myfirst 3s linear 1s infinite alternate;
+  animation: myfirst 4s linear 1s infinite alternate;
   }
   
   @keyframes myfirst {
-    0%   {background-color:red; left:0px; top:0px;}
-    25% {background-color:rgb(55, 0, 255); left:0px; top:0px;} 
-    100%  {background-color:yellow; left:100px; top:0px;}
+    0%   {background-color:red; left:0px; top:0px; border-radius: 4px;}
+    25% {background-color:rgb(55, 0, 255); left:0px; top:0px; border-radius: 4px;} 
+    100%  {background-color:yellow; left:0px; top:0px; border-radius: 4px;} 
+  
   }
 
 main {
@@ -78,9 +79,6 @@ figcaption {
   border:rgb(255, 0, 0), 50px;
 }
 
-@media screen and (max-width: 600px){
-figure{flex-direction: column;}
-}
 
 .headshot {
   margin-bottom: 50px;
@@ -92,6 +90,9 @@ figure{flex-direction: column;}
   margin-top: -400px;
 }
 
+@media screen and (max-width: 600px){
+  figure{flex-direction: column;}
+}
 
 footer {
     margin-top: 100px;
@@ -174,4 +175,92 @@ h3 {
 
     
     @font-face {font-family: 'CoreCircusPierrot4';src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot');src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot?#iefix') format('embedded-opentype'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff2') format('woff2'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff') format('woff'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.ttf') format('truetype');}
+
+
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+    
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color:rgba(#6af177, .8);
+      padding: 2px 12px;
+      color: rgb(33, 33, 33);
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+    
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+    
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
 

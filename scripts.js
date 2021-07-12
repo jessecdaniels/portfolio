@@ -5,7 +5,9 @@ const day = daysofweek[dayindex];
 document.querySelector("header p").textContent=`Happy ${day}!`;
 
 
-
+// ----------------------------------------------------------------
+// Horoscope Feature
+// ----------------------------------------------------------------
 
 const button = document.querySelector(".info-box button");
 const horoscopeDiv = document.querySelector(".info-box .horoscope p");
@@ -29,50 +31,36 @@ async function getHoroscope() {
 // Photography Slideshow
 // ----------------------------------------------------------------
 
-const slides = document.querySelectorAll(".slide");
-const nextBtn = document.querySelector(".nextBtn");
-const prevBtn = document.querySelector(".prevBtn");
-slides.forEach(function (slide, index) {
-  slide.style.left = `${index * 100}%`;
-});
-let counter = 0;
-nextBtn.addEventListener("click", function () {
-  counter++;
-  carousel();
-});
+var slideIndex = 1;
+showSlides(slideIndex);
 
-prevBtn.addEventListener("click", function () {
-  counter--;
-  carousel();
-});
-
-function carousel() {
-  // working with slides
-  // if (counter === slides.length) {
-  //   counter = 0;
-  // }
-  // if (counter < 0) {
-  //   counter = slides.length - 1;
-  // }
-  // working with buttons
-
-  if (counter < slides.length - 1) {
-    nextBtn.style.display = "block";
-  } else {
-    nextBtn.style.display = "none";
-  }
-  if (counter > 0) {
-    prevBtn.style.display = "block";
-  } else {
-    prevBtn.style.display = "none";
-  }
-  slides.forEach(function (slide) {
-    slide.style.transform = `translateX(-${counter * 100}%)`;
-  });
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-prevBtn.style.display = "none";
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 
 
 // ----------------------------------------------------------------
