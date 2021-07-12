@@ -31,36 +31,47 @@ async function getHoroscope() {
 // Photography Slideshow
 // ----------------------------------------------------------------
 
-var slideIndex = 1;
-showSlides(slideIndex);
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+const init = (n) => {
+  slides.forEach((slide, index) => {
+    slide.style.display = "none"
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+document.querySelector(".next").addEventListener('click', next)
+
+document.querySelector(".prev").addEventListener('click', prev)
+
+
+setInterval(() => {
+  next()
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    console.log(currentSlide)
+    init(i)
+    currentSlide = i
+  })
+})
 
 
 // ----------------------------------------------------------------
