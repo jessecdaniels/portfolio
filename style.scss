@@ -58,10 +58,10 @@ figure {
 figure:first-of-type{
   width: 80%;
   max-width: 80%;
-  background-color: rgb(141, 198, 255);
+  background-color: rgb(190, 222, 255);
   font-size: 20px;
 
-  padding: 5px;
+  padding: 20px;
   border-radius: 15px;
 }
 figure img {
@@ -74,11 +74,11 @@ figcaption {
   max-width: 400px;
 }
 .infobox img {
-  margin: 10 auto;
+  margin: 20 auto;
+  padding-top: 10px;
   border-radius: 50px;
   border:rgb(255, 0, 0), 50px;
 }
-
 
 .headshot {
   margin-bottom: 50px;
@@ -90,9 +90,6 @@ figcaption {
   margin-top: -400px;
 }
 
-@media screen and (max-width: 600px){
-  figure{flex-direction: column;}
-}
 
 footer {
     margin-top: 100px;
@@ -181,6 +178,10 @@ h3 {
       box-sizing: border-box;
     }
     
+    img {
+      vertical-align: middle;
+    }
+    
     /* Position the image container (needed to position the left and right arrows) */
     .container {
       position: relative;
@@ -189,6 +190,8 @@ h3 {
     /* Hide the images by default */
     .mySlides {
       display: none;
+
+
     }
     
     /* Add a pointer when hovering over the thumbnail images */
@@ -212,6 +215,10 @@ h3 {
       user-select: none;
       -webkit-user-select: none;
     }
+
+    .thumbnail {
+      width: 80%;
+    }
     
     /* Position the "next button" to the right */
     .next {
@@ -222,7 +229,7 @@ h3 {
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 255, 149, 0.8);
     }
     
     /* Number text (1/3 etc) */
@@ -237,9 +244,9 @@ h3 {
     /* Container for image text */
     .caption-container {
       text-align: center;
-      background-color:rgba(#6af177, .8);
-      padding: 2px 12px;
-      color: rgb(33, 33, 33);
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
     }
     
     .row:after {
@@ -263,4 +270,8 @@ h3 {
     .demo:hover {
       opacity: 1;
     }
+     
 
+    @media screen and (max-width: 600px){
+      figure{flex-direction: column;}
+      }
