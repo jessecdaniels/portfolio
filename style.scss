@@ -174,103 +174,94 @@ h3 {
     @font-face {font-family: 'CoreCircusPierrot4';src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot');src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot?#iefix') format('embedded-opentype'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff2') format('woff2'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff') format('woff'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.ttf') format('truetype');}
 
 
-    * {
-      box-sizing: border-box;
-    }
     
-    img {
-      vertical-align: middle;
-    }
-    
-    /* Position the image container (needed to position the left and right arrows) */
-    .container {
-      position: relative;
-    }
-    
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
-
-
-    }
-    
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
-      cursor: pointer;
-    }
-    
-    /* Next & previous buttons */
-    .prev,
-    .next {
+    .slide-container .prev,
+    .slide-container .next {
       cursor: pointer;
       position: absolute;
-      top: 40%;
+      top: 50%;
       width: auto;
+      margin-top: -22px;
       padding: 16px;
-      margin-top: -50px;
       color: white;
       font-weight: bold;
       font-size: 20px;
+      transition: all 0.6s ease;
       border-radius: 0 3px 3px 0;
       user-select: none;
-      -webkit-user-select: none;
-    }
-
-    .thumbnail {
-      width: 80%;
     }
     
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 255, 149, 0.8);
-    }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* Container for image text */
-    .caption-container {
-      text-align: center;
-      background-color: #222;
-      padding: 2px 16px;
+    .slide-container .prev:hover,
+    .slide-container .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
       color: white;
     }
     
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
+    .slide-container .prev {
+      left: 2px;
     }
     
-    /* Six columns side by side */
-    .column {
-      float: left;
-      width: 16.66%;
+    .slide-container .next {
+      right: 2px;
     }
     
-    /* Add a transparency effect for thumnbail images */
-    .demo {
-      opacity: 0.6;
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
     
-    .active,
-    .demo:hover {
-      opacity: 1;
+    .dots-container .dot {
+      cursor: pointer;
+      margin: 5px;
+      width: 20px;
+      height: 20px;
+      color: #333;
+      border-radius: 50%;
+      background-color: #dfd6ce;
     }
-     
+    
+    .dots-container .dot.active {
+      border: 2px solid green;
+    }
+    
+    * {
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      height: 100%;
+    /*   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+    }
+    
+    body h1 {
+      text-align: center;
+    }
+    
+    .slide-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+    
+    .slide-container .slide {
+      display: none;
+      width: 100%;
+    }
+    
+    .slide-container .slide.fade {
+      animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+    
+    .slide-container .slide img {
+      width: 100%;
+    }
 
     @media screen and (max-width: 600px){
       figure{flex-direction: column;}
