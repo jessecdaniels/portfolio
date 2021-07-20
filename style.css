@@ -79,6 +79,10 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -92,38 +96,30 @@ figure {
 figure:first-of-type {
   width: 80%;
   max-width: 80%;
-  background-color: #bedeff;
+  background-color: rgba(255, 218, 252, 0.384);
   font-size: 20px;
   padding: 20px;
   border-radius: 15px;
 }
 
 figure img {
-  width: 400px;
+  width: 300px;
   display: block;
-  margin-right: 15px;
+  margin-right: 10px;
+}
+
+figure a:hover {
+  cursor: hand;
 }
 
 figcaption {
   text-align: left;
-  max-width: 400px;
-}
-
-.infobox img {
-  margin: 20 auto;
-  padding-top: 10px;
-  border-radius: 50px;
-  border: red, 50px;
+  max-width: 500px;
 }
 
 .headshot {
   margin-bottom: 50px;
   border-radius: 10px;
-}
-
-.horoscopes {
-  padding-top: 400px;
-  margin-top: -400px;
 }
 
 footer {

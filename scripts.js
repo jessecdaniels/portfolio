@@ -1,31 +1,13 @@
+// ----------------------------------------------------------------
+// Daily Greeting In Header (Array)
+// ----------------------------------------------------------------
+
 const daysofweek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayindex = (new Date()).getDay();
 const day = daysofweek[dayindex];
 
 document.querySelector("header p").textContent=`Happy ${day}!`;
 
-
-// ----------------------------------------------------------------
-// Horoscope Feature
-// ----------------------------------------------------------------
-
-const button = document.querySelector(".info-box button");
-const horoscopeDiv = document.querySelector(".info-box .horoscope p");
-
-// document.addEventListener("DOMContentLoaded", getHoroscope);
-
-button.addEventListener("click", getHoroscope);
-
-async function getHoroscope() {
-    const horoscopeData = await fetch("http://sandipbgt.com/theastrologer/api/horoscope/cancer/today/", {
-        headers: {
-            Accept: "application/json"
-        }
-    });
-    const horoscopeObj = await horoscopeData.json();
-    horoscopeDiv.innerHTML = horoscopeObj.horoscope;
-    console.log(horoscopeData);
-}
 
 // ----------------------------------------------------------------
 // Photography Slideshow
@@ -74,9 +56,10 @@ dots.forEach((dot, i) => {
 })
 
 
-// ----------------------------------------------------------------
+// -----------------------------------------------------------------------------------
 // Spotify API | My Last Played Song
-// ----------------------------------------------------------------
+// going to come back to working on this when Spotify decides to play nicer with devs
+// -----------------------------------------------------------------------------------
 
 // const songDiv = document.querySelector(".figure .song p");
 
@@ -92,4 +75,45 @@ dots.forEach((dot, i) => {
 //     songDiv.innerHTML = songObj.song;
 //     console.log(songData);
 
-// 
+
+
+// ----------------------------------------------------------------
+// Horoscope Feature (API Call)
+// ----------------------------------------------------------------
+
+
+const horoscopeDiv = document.querySelector(".info-box .horoscope p");
+
+// document.addEventListener("DOMContentLoaded", getHoroscope); 
+// used this to auto load horoscope before I added the select option
+
+document.querySelector("#list").addEventListener("change", getHoroscope);
+
+async function getHoroscope() {
+  const sunsign = document.querySelector("#list").value;
+    const horoscopeData = await fetch(`http://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`, {
+        headers: {
+            Accept: "application/json"
+        }
+    });
+    const horoscopeObj = await horoscopeData.json();
+    horoscopeDiv.innerHTML = horoscopeObj.horoscope;
+    console.log(horoscopeObj);
+}
+
+// ----------------------------------------------------------------
+// Word Count: Count and return the number of words in my bio
+// ----------------------------------------------------------------
+
+var wordsInPost = wordCount(document.querySelectorAll(".bio"));
+
+function wordCount(words) {
+	var count = 0;
+	for (var i = 0; i < words.length; i++) {
+		count += words[i].textContent.split(' ').length;
+    count =`<h2>You may be interested to know this bio contains ${count} words</h2>`;
+    document.querySelector("#wordcount").innerHTML = count;
+
+	}
+	return count;
+}

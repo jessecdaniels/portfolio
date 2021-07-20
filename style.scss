@@ -7,10 +7,9 @@ $orange: #f5b10b;
 
 $darkblue: #2f3e9c;
 $darkred: #9e132c;
-$purple:#6e1f58;
+$purple: #6e1f58;
 
 $outline: 2px;
-
 
 body {
   margin: 0;
@@ -50,6 +49,7 @@ main {
 }
 figure {
   display: flex;
+  flex-flow: column; // added this to change order of fig and fig caption
   justify-content: center;
   align-items: center;
   max-width: 600px;
@@ -58,38 +58,44 @@ figure {
 figure:first-of-type{
   width: 80%;
   max-width: 80%;
-  background-color: rgb(190, 222, 255);
+  background-color: rgba(255, 218, 252, 0.384);
   font-size: 20px;
 
   padding: 20px;
   border-radius: 15px;
 }
 figure img {
-  width: 400px;
+  width: 300px;
   display: block;
-  margin-right: 15px;
+  margin-right: 10px;
 }
+
+figure a:hover {
+  cursor: hand;
+}
+
 figcaption {
   text-align: left;
-  max-width: 400px;
+  max-width: 500px;
+  
 }
-.infobox img {
-  margin: 20 auto;
-  padding-top: 10px;
-  border-radius: 50px;
-  border:rgb(255, 0, 0), 50px;
-}
+// .infobox img {
+//   margin: 20 auto;
+//   padding-top: 10px;
+//   border-radius: 50px;
+//   border:rgb(255, 0, 0), 50px;
+// }
 
 .headshot {
   margin-bottom: 50px;
   border-radius: 10px;
 }
 
-.horoscopes {
-  padding-top: 400px;
-  margin-top: -400px;
-}
-
+// WHAT WAS THIS DOING?
+// .horoscopes {
+//   padding-top: 400px;
+//   margin-top: -400px;
+// }
 
 footer {
     margin-top: 100px;
@@ -174,7 +180,8 @@ h3 {
     @font-face {font-family: 'CoreCircusPierrot4';src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot');src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.eot?#iefix') format('embedded-opentype'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff2') format('woff2'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.woff') format('woff'),url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_13_0.ttf') format('truetype');}
 
 
-    
+// slideshow styling
+
     .slide-container .prev,
     .slide-container .next {
       cursor: pointer;
@@ -263,6 +270,9 @@ h3 {
       width: 100%;
     }
 
+// Media Queries
+
     @media screen and (max-width: 600px){
       figure{flex-direction: column;}
+      
       }
