@@ -111,7 +111,7 @@ function wordCount(words) {
 	var count = 0;
 	for (var i = 0; i < words.length; i++) {
 		count += words[i].textContent.split(' ').length;
-    count =`<h2>You may be interested to know this bio contains ${count} words</h2>`;
+    count =`<p>**You may be interested to know this bio contains ${count} words, according to my JavaScript word counter**</p>`;
     document.querySelector("#wordcount").innerHTML = count;
 
 	}

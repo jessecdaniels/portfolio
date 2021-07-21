@@ -1,30 +1,26 @@
 # **Jesse Daniels Portfolio & Personal Website**  
-# :thumbsup: :hammer: :necktie: :walking: :beers: :doughnut: :camera: :briefcase: :wrench: :golf: :punch: :older_man: :dog: :watch: :hamburger:
 
-### Goal: Create a personal portfolio for my job search
+### Goal: Create a personal portfolio of completed projects for my job search
 
-The main purpose of this website is to introduce myself to employers and showcase my HTML, CSS and Javascript skills that I have been working on during my time as a student at Code Louisville. 
+The main purpose of this website is to introduce myself to employers and showcase my HTML, CSS and Javascript skills that I have been working on during my time as a student at Code Louisville. This website also serves as my final project for the May 2021 Javascript cohort of Code Louisville.  
 
-## Current Features 
-    1. Header Greeting: Create array of the days of the week iterate over it, and display a greeting message.
+## Current Notable Features 
+    1. Header Greeting: Create an array of the days of the week, iterate over it, and display a greeting message which returns the current day.
     2. Character Count: Count the number of characters in the bio and return count. 
-    3. Horoscope Feature: Uses fetch method to display your Zodiac
-    4. Responsive website design using flexbox and media queries.
-    5. Use Sass to have stylized text effects while remaining assceable. 
+    3. Horoscope Feature: Uses fetch method to interact with an API and return  the selected Zodiac. 
+    4. Responsive website design using flex design and media queries for common breakpoints: mobile, tablet, and desktop.
+    5. Use Sass to implement stylized text effects while remaining accessible. 
 
 ## Roadmap
-    1. Implement lazy loading onscroll for images to improve load times. 
-    2. Clean up some repetation in the CSS. 
-    3. Add skills icons and program familiarties 
+    1. Implement lazy loading on-scroll for images to improve load times. 
+    2. Clean up some repetition in the CSS. 
+    3. Add skills icons and program familiarities 
 
 ## Author
 
 * Jesse Daniels  
 
 ## *Acknowledgements*
-* The Official [National Fatherhood Initiative!](https://www.fatherhood.org/)
-* Dad.com (https://www.thedad.com/)
-* API fetch coming from [I Can Haz Dad Joke](https://icanhazdadjoke.com/)git
-* Dads memes downloaded from [Memedroid.com](https://www.memedroid.com/memes/tag/dad)
+* API fetch coming from [The Astrologer | Kelli Fox](http://sandipbgt.com/theastrologer-api/api.html)git
 * All the Code Louisville Staff & Mentors
 * My mentor outside of Code Louisville, Ian M.
