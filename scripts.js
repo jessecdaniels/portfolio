@@ -91,7 +91,7 @@ document.querySelector("#list").addEventListener("change", getHoroscope);
 
 async function getHoroscope() {
   const sunsign = document.querySelector("#list").value;
-    const horoscopeData = await fetch(`http://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`, {
+    const horoscopeData = await fetch(`https://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`, {
         headers: {
             Accept: "application/json"
         }
