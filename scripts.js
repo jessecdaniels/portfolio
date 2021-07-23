@@ -97,6 +97,7 @@ async function getHoroscope() {
 }
 
 
+
 // ----------------------------------------------------------------
 // Word Count: Count and return the number of words in my bio
 // ----------------------------------------------------------------
