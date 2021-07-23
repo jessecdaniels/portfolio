@@ -19,14 +19,9 @@ header p {
   font-family: 'CoreCircus', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 50px;
   color: white;
   text-shadow: 2px 2px #9d9d9d;
-  position: relative;
   -webkit-animation: myfirst 4s linear 1s infinite alternate;
           animation: myfirst 4s linear 1s infinite alternate;
 }
@@ -71,6 +66,10 @@ header p {
     top: 0px;
     border-radius: 4px;
   }
+}
+
+h3 {
+  visibility: hidden;
 }
 
 button {
@@ -170,27 +169,6 @@ figcaption {
 
 .projects {
   padding-bottom: 20px;
-}
-
-footer {
-  margin-top: 100px;
-  padding: 5px;
-  color: black;
-  background-color: #fff3fc;
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-h3 {
-  visibility: hidden;
 }
 
 h1 {
@@ -448,6 +426,23 @@ a.btn-social,
   background-color: #83c3f3;
 }
 
+footer {
+  margin-top: 100px;
+  padding: 5px;
+  color: black;
+  background-color: #fff3fc;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (max-width: 320px) {
   figure {
     -webkit-box-orient: vertical;
@@ -471,13 +466,9 @@ a.btn-social,
   header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
-  }
-  header p {
-    height: 40px;
-    padding-top: 5px;
   }
   figure img {
     width: 300px;
@@ -491,9 +482,6 @@ a.btn-social,
   }
   h1 {
     font-size: 8vw;
-  }
-  header {
-    max-height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

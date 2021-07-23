@@ -84,22 +84,18 @@ dots.forEach((dot, i) => {
 
 const horoscopeDiv = document.querySelector(".info-box .horoscope p");
 
-// document.addEventListener("DOMContentLoaded", getHoroscope); 
-// used this to auto load horoscope before I added the select option
-
 document.querySelector("#list").addEventListener("change", getHoroscope);
 
 async function getHoroscope() {
   const sunsign = document.querySelector("#list").value;
-    const horoscopeData = await fetch(`https://theastrologer-api.herokuapp.com/api/horoscope/{sunsign}/today`, {
-        headers: {
-            Accept: "application/json"
-        }
-    });
+    const horoscopeData = await fetch(`https://aztro.sameerkumar.website/?sign=${sunsign}&day=today`, 
+    { method: 'POST' });
+
     const horoscopeObj = await horoscopeData.json();
-    horoscopeDiv.innerHTML = horoscopeObj.horoscope;
+    horoscopeDiv.innerHTML = horoscopeObj.description;
     console.log(horoscopeObj);
 }
+
 
 // ----------------------------------------------------------------
 // Word Count: Count and return the number of words in my bio
@@ -117,3 +113,24 @@ function wordCount(words) {
 	}
 	return count;
 }
+
+// horoscope works for project but not hosted due to https error:
+
+// const horoscopeDiv = document.querySelector(".info-box .horoscope p");
+
+// // document.addEventListener("DOMContentLoaded", getHoroscope); 
+// // used this to auto load horoscope before I added the select option
+
+// document.querySelector("#list").addEventListener("change", getHoroscope);
+
+// async function getHoroscope() {
+//   const sunsign = document.querySelector("#list").value;
+//     const horoscopeData = await fetch(`http://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`, {
+//         headers: {
+//             Accept: "application/json"
+//         }
+//     });
+//     const horoscopeObj = await horoscopeData.json();
+//     horoscopeDiv.innerHTML = horoscopeObj.horoscope;
+//     console.log(horoscopeObj);
+// }

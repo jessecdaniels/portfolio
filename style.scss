@@ -28,13 +28,11 @@ header p {
   font-family: 'CoreCircus', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
-	text-decoration: none;
-  justify-content: center;
+
   height: 50px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px #9d9d9d;
   
-  position: relative;
   animation: myfirst 4s linear 1s infinite alternate;
   }
 
@@ -44,7 +42,9 @@ header p {
     100%  {background-color:yellow; left:0px; top:0px; border-radius: 4px;} 
   
   }
-
+h3{
+  visibility: hidden;
+}
 
   button {
     margin-top: 20px;
@@ -134,8 +134,6 @@ figcaption {
   }
 
 
-  visibility: hidden;
-}
 
   h1 {	
       font-family: 'CoreCircus', sans-serif;
@@ -422,8 +420,6 @@ footer {
   align-items: center;
 }
 
-h3 {
-
 // Media Queries
 
     @media screen and (max-width: 320px){
@@ -438,8 +434,7 @@ h3 {
     }
     
       @media screen and (max-width: 769px){
-        header{flex-flow: column; text-align: center;}
-        header p{height: 40px; padding-top: 5px;}
+        header{flex-direction: column; text-align: center;}
         figure img {width: 300px;}
         .bio {text-align: center;}
         .projects,
@@ -447,6 +442,4 @@ h3 {
           padding: 20px;
         }
         h1{font-size: 8vw;}
-        header{max-height: 200px;}
-        }
-      
+      }
