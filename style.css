@@ -17,9 +17,9 @@ header {
 
 header p {
   font-family: 'CoreCircus', sans-serif;
-  font-size: 20px;
+  font-size: 34px;
   text-transform: uppercase;
-  height: 50px;
+  height: 40px;
   color: white;
   text-shadow: 2px 2px #9d9d9d;
   -webkit-animation: myfirst 4s linear 1s infinite alternate;
@@ -482,6 +482,12 @@ footer {
   }
   h1 {
     font-size: 8vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  header p {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ $purple: #6e1f58;
 
 $outline: 2px;
 
+
 body {
   margin: 0;
   font-family: 'Assistant', sans-serif;
@@ -26,10 +27,10 @@ header {
 }
 header p {
   font-family: 'CoreCircus', sans-serif;
-  font-size: 20px;
+  font-size: 34px;
   text-transform: uppercase;
 
-  height: 50px;
+  height: 40px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px #9d9d9d;
   
@@ -408,6 +409,12 @@ a.btn-social,
 //     background-color: #6bd079;
 // }
 
+// .chart,
+// .horoscope p
+// {
+//   background-color: $red;
+
+// }
 
 footer {
   margin-top: 100px;
@@ -443,3 +450,9 @@ footer {
         }
         h1{font-size: 8vw;}
       }
+
+      @media screen and (max-width: 1500px){
+        header p {
+          font-size: 25px;
+        }
+          }
