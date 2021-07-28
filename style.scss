@@ -20,7 +20,6 @@ body {
 }
 header {
   padding: 30px;
-  margin-bottom: 10px;
   display: flex;
  
   background:linear-gradient(8deg, rgb(254, 218, 212) 43%,rgba(173, 252, 186, 0.81) 30%);
@@ -29,7 +28,6 @@ header p {
   font-family: 'CoreCircus', sans-serif;
   font-size: 34px;
   text-transform: uppercase;
-
   height: 40px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px #9d9d9d;
@@ -42,12 +40,12 @@ header p {
     25% {background-color:rgb(55, 0, 255); left:0px; top:0px; border-radius: 4px;} 
     100%  {background-color:yellow; left:0px; top:0px; border-radius: 4px;} 
   
-  }
+}
 h3{
   visibility: hidden;
 }
 
-  button {
+button {
     margin-top: 20px;
     width: fit-content;
     padding: 12px;
@@ -60,16 +58,14 @@ h3{
     text-transform: uppercase;
     cursor: pointer;
 }
-  button a{
-    text-decoration: none;
+button a{
+  text-decoration: none;
   }
-  
 
 button:hover {
   box-shadow: 0 3px #666;
   transform: translateY(4px);
 }
-
 
 main {
   margin: auto;
@@ -80,17 +76,16 @@ figure {
   flex-flow: column; // added this to change order of fig and fig caption
   justify-content: center;
   align-items: center;
-  max-width: 600px;
   margin: 0 auto 50px;
 
 }
 figure:first-of-type{
-  width: 80%;
-  max-width: 80%;
-  background-color: #ffe7eb;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff1f3;
   font-size: 20px;
-  padding: 10px;
-  border-radius: 15px;
+  padding:  10px;
+
 }
 
 figure img {
@@ -109,32 +104,35 @@ figcaption {
   max-width: 500px;
   
 }
+.horoback{
+  width: 100%;
+  display: flex;
+  flex-flow: column; // added this to change order of fig and fig caption
+  justify-content: center;
+  text-align: center;
+  background-color: #ffe1e7;
+}
+.bio {
+  max-width: 500px;
+}
+.horobio{
+  max-width: 500px;
+}
 
 .headshot {
   margin: 5px 5px 5px;
   border-radius: 30px;
-
 }
 
 .horoscope {
   padding-top: 40px;
   margin-top: -100px;
 }
-.horo-bio {
-  background-color: lightpink;
-    width: 80%;
-    max-width: 80%;
-    background-color: #f98ca4;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 15px;
-  }
+ 
 
   .projects{
     padding-bottom: 20px;
   }
-
-
 
   h1 {	
       font-family: 'CoreCircus', sans-serif;
@@ -409,18 +407,32 @@ a.btn-social,
 //     background-color: #6bd079;
 // }
 
-// .chart,
-// .horoscope p
-// {
-//   background-color: $red;
+.chart,
+.horoback
+{
+  max-width: 100%;
 
-// }
+  align-items: center;
+  background-color: #fff1f3;
+  font-size: 20px;
+  padding:  10px;
+  padding-bottom: 20px;
+}
+
+.horoscope p{
+  max-width: 500px;
+}
+
+.chart{
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 12px;
+}
 
 footer {
   margin-top: 100px;
   padding: 5px;
   color: rgb(0, 0, 0);
-  background-color: #fff3fc;
   font-size: 20px;
   display: flex;
   justify-content: center;

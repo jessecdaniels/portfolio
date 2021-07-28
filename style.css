@@ -8,7 +8,6 @@ body {
 
 header {
   padding: 30px;
-  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,17 +117,15 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 600px;
   margin: 0 auto 50px;
 }
 
 figure:first-of-type {
-  width: 80%;
-  max-width: 80%;
-  background-color: #ffe7eb;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff1f3;
   font-size: 20px;
   padding: 10px;
-  border-radius: 15px;
 }
 
 figure img {
@@ -147,6 +144,30 @@ figcaption {
   max-width: 500px;
 }
 
+.horoback {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #ffe1e7;
+}
+
+.bio {
+  max-width: 500px;
+}
+
+.horobio {
+  max-width: 500px;
+}
+
 .headshot {
   margin: 5px 5px 5px;
   border-radius: 30px;
@@ -155,16 +176,6 @@ figcaption {
 .horoscope {
   padding-top: 40px;
   margin-top: -100px;
-}
-
-.horo-bio {
-  background-color: lightpink;
-  width: 80%;
-  max-width: 80%;
-  background-color: #f98ca4;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 15px;
 }
 
 .projects {
@@ -426,11 +437,32 @@ a.btn-social,
   background-color: #83c3f3;
 }
 
+.chart,
+.horoback {
+  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff1f3;
+  font-size: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.horoscope p {
+  max-width: 500px;
+}
+
+.chart {
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 12px;
+}
+
 footer {
   margin-top: 100px;
   padding: 5px;
   color: black;
-  background-color: #fff3fc;
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
