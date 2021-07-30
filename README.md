@@ -21,6 +21,6 @@ The main purpose of this website is to introduce myself to employers and showcas
 * Jesse Daniels  
 
 ## *Acknowledgements*
-* API fetch coming from [Aztro](https://aztro.sameerkumar.website)git
+* API fetch coming from [Aztro](https://aztro.sameerkumar.website)
 * All the Code Louisville Staff & Mentors
 * My mentor outside of Code Louisville, Ian M.
