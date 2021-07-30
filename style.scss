@@ -109,7 +109,7 @@ figcaption {
   display: flex;
   flex-flow: column; // added this to change order of fig and fig caption
   justify-content: center;
-  text-align: center;
+  text-align: left;
   background-color: #ffe1e7;
 }
 .bio {
@@ -307,7 +307,7 @@ a.btn-social,
     display: inline-block;
     height: 54px;
     line-height: 54px;
-    margin: 8px 4px;
+    margin: 4px 4px;
     text-align: center;
     text-decoration: none;
     transition: background-color .3s;
@@ -411,7 +411,6 @@ a.btn-social,
 .horoback
 {
   max-width: 100%;
-
   align-items: center;
   background-color: #fff1f3;
   font-size: 20px;
@@ -421,6 +420,7 @@ a.btn-social,
 
 .horoscope p{
   max-width: 500px;
+  text-align: left;
 }
 
 .chart{

@@ -156,7 +156,7 @@ figcaption {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  text-align: left;
   background-color: #ffe1e7;
 }
 
@@ -352,7 +352,7 @@ a.btn-social,
   display: inline-block;
   height: 54px;
   line-height: 54px;
-  margin: 8px 4px;
+  margin: 4px 4px;
   text-align: center;
   text-decoration: none;
   transition: background-color .3s;
@@ -451,6 +451,7 @@ a.btn-social,
 
 .horoscope p {
   max-width: 500px;
+  text-align: left;
 }
 
 .chart {
