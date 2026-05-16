@@ -78,10 +78,10 @@ a {
 .section-title {
   font-family: 'CoreCircus', sans-serif;
   text-transform: uppercase;
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(2.6rem, 7vw, 5rem);
   text-align: center;
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   color: var(--red);
   text-shadow:
     -1px -1px 0 var(--purple), 1px -1px 0 var(--purple), -1px 1px 0 var(--purple), 1px 1px 0 var(--purple),
