@@ -80,27 +80,49 @@ if (bioEl && wordcountEl) {
 
 // ----------------------------------------------------------------
 // Horoscope Feature
-// Uses horoscope-app-api.vercel.app (free, no key required)
+// Deterministic daily generator: sign + date produces a consistent
+// reading for the day without depending on any external API.
 // ----------------------------------------------------------------
 const horoscopeSelect = document.getElementById('list');
 const horoscopeResult = document.querySelector('.horoscope-result');
 
-if (horoscopeSelect && horoscopeResult) {
-  horoscopeSelect.addEventListener('change', getHoroscope);
+const horoscopePool = [
+  "Today calls for patience. The answers you're looking for are closer than they appear — give them room to arrive.",
+  "A creative idea you've been sitting on is worth revisiting. The timing that felt off before may finally be right.",
+  "Someone in your orbit is paying closer attention than you think. Show up as your full self today.",
+  "Resist the urge to over-explain. Your instincts are solid. Trust them and move.",
+  "An unexpected conversation could shift your perspective on something you thought was settled.",
+  "Energy is high today. Channel it into the work that actually matters rather than what feels urgent.",
+  "The thing you've been putting off will feel lighter than you expect once you start. Just start.",
+  "Pay attention to what drains you and what refills you today. That contrast is telling you something.",
+  "A small gesture of generosity comes back around in ways you won't anticipate. Give freely.",
+  "Today is better spent listening than talking. You'll learn something worth knowing.",
+  "Clarity is coming, but not on your timeline. Sit with the uncertainty a little longer.",
+  "The right door won't require you to force it. If something feels like a battle, look for the other door.",
+  "Your attention is your most valuable resource today. Guard it like you mean it.",
+  "Something you built or said weeks ago is paying off right now, even if quietly.",
+  "Bold moves are favored today. The version of you who hesitates is not the version needed right now.",
+  "Rest is not the same as giving up. Recharging is part of the work.",
+  "A pattern you keep repeating is asking to be examined. You already know which one.",
+  "Today's small decisions are building something larger. Choose accordingly.",
+  "The most interesting path forward is probably the one you haven't considered yet.",
+  "Lead with curiosity today rather than certainty. You'll get further."
+];
+
+function dailySeed(sign) {
+  const today = new Date();
+  const dateStr = `${today.getFullYear()}${today.getMonth()}${today.getDate()}`;
+  const combined = sign + dateStr;
+  let hash = 0;
+  for (let i = 0; i < combined.length; i++) {
+    hash = (hash * 31 + combined.charCodeAt(i)) & 0xffffffff;
+  }
+  return Math.abs(hash) % horoscopePool.length;
 }
 
-async function getHoroscope() {
-  const sign = horoscopeSelect.value;
-  horoscopeResult.textContent = 'Reading the stars...';
-
-  try {
-    const res = await fetch(
-      `https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=${sign}&day=today`
-    );
-    if (!res.ok) throw new Error('API error');
-    const data = await res.json();
-    horoscopeResult.textContent = data?.data?.horoscope_data || 'The stars are quiet today. Try again later.';
-  } catch {
-    horoscopeResult.textContent = 'Could not load horoscope right now. The cosmos are mysterious like that.';
-  }
+if (horoscopeSelect && horoscopeResult) {
+  horoscopeSelect.addEventListener('change', () => {
+    const sign = horoscopeSelect.value;
+    horoscopeResult.textContent = horoscopePool[dailySeed(sign)];
+  });
 }

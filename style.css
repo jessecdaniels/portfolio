@@ -964,7 +964,7 @@ a {
 
 .photo-intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 48px;
   margin-bottom: 48px;
 }
@@ -973,7 +973,12 @@ a {
   font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.75;
-  max-width: 500px;
+  max-width: 560px;
+  margin-bottom: 16px;
+}
+
+.photo-text p:last-child {
+  margin-bottom: 0;
 }
 
 .collage {
