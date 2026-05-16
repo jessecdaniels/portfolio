@@ -384,7 +384,7 @@ a {
    ABOUT
    ============================================================ */
 .about-section {
-  padding: 100px 0;
+  padding: 64px 0;
   background: #fff;
 }
 
@@ -519,7 +519,7 @@ a {
    EXPERIENCE / TIMELINE
    ============================================================ */
 .experience-section {
-  padding: 100px 0;
+  padding: 64px 0;
   background: #fff;
 }
 
@@ -756,7 +756,7 @@ a {
    PROJECTS
    ============================================================ */
 .projects-section {
-  padding: 100px 0;
+  padding: 64px 0;
   background: var(--bg-alt);
 }
 
@@ -892,7 +892,7 @@ a {
    SKILLS
    ============================================================ */
 .skills-section {
-  padding: 100px 0;
+  padding: 64px 0;
   background: #fff;
 }
 
@@ -958,7 +958,7 @@ a {
    PHOTOGRAPHY
    ============================================================ */
 .photography-section {
-  padding: 100px 0 60px;
+  padding: 64px 0 40px;
   background: var(--bg-alt);
 }
 
@@ -1069,7 +1069,7 @@ a {
    FUN / HOROSCOPE
    ============================================================ */
 .fun-section {
-  padding: 100px 0;
+  padding: 64px 0;
   background: var(--pink-light);
 }
 
