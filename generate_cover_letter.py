@@ -150,6 +150,10 @@ def build_cover_letter():
 
         "Slingshot's approach to AI as a core part of how you build, not a bolt-on, is exactly the "
         "environment I want to work in. I'd love to talk.",
+
+        "I also noticed the Product Designer opening. My front-end development background and UX "
+        "experience mean I speak that language fluently and can partner closely with your design team "
+        "from day one.",
     ]
 
     story = []
