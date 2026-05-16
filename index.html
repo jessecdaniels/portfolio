@@ -3,135 +3,510 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Jesse Daniels Portfolio | jdanielsstudio@gmail.com</title>
+  <title>Jesse Daniels | Digital Product Manager & Web Developer | Louisville, KY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jesse Daniels — Digital Product Manager & Web Developer II at Kentucky Education Television. Building human-centered digital experiences with AI at the core. Based in Louisville, KY.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="images/crumpled-can.png">
-  <script defer src="/scripts.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script defer src="scripts.js"></script>
 </head>
 
 <body>
-  <header>    
-    <h1 content data-heading="Jesse Daniels Portfolio">Jesse Daniels Portfolio</h1>
-    <p></p>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">JD</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="Jesse-Daniels-Resume.pdf" target="_blank" class="btn-nav-resume"><i class="fa fa-download"></i> Resume</a></li>
+      <li><a href="#contact" class="btn-nav">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting" id="greeting"></p>
+      <h1 data-heading="Jesse Daniels">Jesse Daniels</h1>
+      <p class="hero-tagline">Digital Product Manager &amp; Web Developer</p>
+      <p class="hero-sub">Business-minded problem solver building intuitive, impactful technology — with AI as a core part of the process. Based in Louisville, KY.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="Jesse-Daniels-Resume.pdf" target="_blank" class="btn-secondary"><i class="fa fa-download"></i> Download Resume</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/Jesse_Daniels_Headshot.jpg" alt="Jesse Daniels" class="headshot">
+    </div>
   </header>
-  <main> 
-    <figure>
-      <img class="headshot" src="images/Jesse_Daniels_Headshot.jpg" alt="Jesse Daniels Photo"> 
-      <figcaption class="bio"><p>Hello, I'm Jesse Daniels. One of 186 such named individuals according to outdated US Census data, but I am one of a kind according to
-        my family! I have completed 15 months of training in the Code Louisville program with certificates in Front-End Web Development, C# and JavaScript.<br><br>
-        I am a resilient, creative problem solver with a passion for producing great work in everything I do. I am a dedicated lifelong learner with a genuine positive disposition, with a focused interest in programming, technology, design, and the arts. I enjoy spending my free time hanging out with my family.
-        <p id="wordcount"></p>
-      </figcaption>          
-          <div class="col-md-12">
-              <a href="https://www.linkedin.com/in/jesse-daniels/" target="_blank" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/jessecdaniels" target="_blank" class="btn-social btn-github"><i class="fa fa-github-alt"></i></a>
-              <a href="https://twitter.com/jesseandgena" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/jesse.daniels.photo/" target="_blank" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+
+  <main>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <h2 class="section-title" data-heading="About Me">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text bio">
+            <p>I'm a business-minded problem solver turned <strong>Digital Product Owner &amp; Web Developer</strong>, with years of experience owning and operating successful businesses before bringing that perspective into tech.</p>
+            <p>My hands-on background in sales, client relations, and running a 14-person team is now the foundation I use to create technology that is both intuitive and impactful. I drive full product life cycles — from concept through launch — with a people-first mindset and a genuine commitment to ongoing learning.</p>
+            <p>Lately, I've been leaning hard into AI as a force-multiplier: not just experimenting with it, but integrating it into my design and development workflow to build things that simply weren't possible before. I believe great products come from teams that trust each other's expertise — and aren't afraid to challenge their own processes.</p>
+            <p id="wordcount" class="wordcount-note"></p>
           </div>
-       
-      <button><a href="mailto:jdanielsstudio@gmail.com">Contact Me</a></button>
-
-    </figure>
-  
-    <h1>Projects</h1>
-    <figure><a href="http://www.socksplussandals.com/">
-      <img src="images/cooldads-website-screen.jpg" alt="Jesse Daniels Website for cool dads"></a>
-      <figcaption class="projects">This is my latest project showcasing my HTML, CSS, and JavaScript progress for Code Louisville. Socks Plus
-        Sandles is a website for, you guessed it, COOL DADS! If you rock Crocs with socks this a website for you. http://www.socksplussandals.com/.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/ipad-healthy-heart-display.jpg" alt="Jesse Daniels Website a healthy low sodium heart">
-      <figcaption class="projects">This is was my first project showcasing my HTML and CSS skills learned in the Code Louisville program. Building this site helped me learn responsive webdesign.
-        Healthy Heart is a simple website to showcase some of my favorite low sodium products available.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/Csharp-project-jesse-daniels.jpg" alt="Jesse Daniels C# journal project">
-      <figcaption class="projects">This was a Dot Net C# application I built. The purpose of the app is to create a daily journal of memories of my daughters growing up.
-        The app has a search and delete option, as well as display feature that shows the entries from one year ago.</figcaption>
-    </figure>
-    <figure><a href="http://www.bamsocialphotobooth.com/">
-      <img src="images/BAM_Logo_Pink.jpg" alt="Bam Social Photo Booth logo and website"></a>
-      <figcaption class="projects">BAM is a company I designed from the ground up. Designing the logo in Photoshop and building the website with Wordpress. The goal of this project was to create an attention grabbing brand and simple working website for my Photobooth rental buisness.</figcaption>
-    </figure>
-    <figure><a href="http://www.neonphotoco.com/">
-      <img src="images/neon-photo-co-website-phone-display.jpg" alt="Neon Photo Co website"></a>
-      <figcaption class="projects">Neon Photo Co is a website I built using Wordpress. The purpose of this project was to build a working website to advertise my commerical photography studio & portfolio.</figcaption>
-    </figure>
-
-    <h1>Photography Work</h1>
-<figure>
-  <div class="horoback"><p class="horobio">Since the summer following my college graduation I have been a professional photographer. I grew the business through networking, self learning, surrounding myself with good mentors, and grit. Traditional photography is a very hard way to make a living but we have done quite well from the bottom up.</p>
-      <img class="collage" src="images/jesse-collage.png" alt="Jesse Daniels working as a photographer">
-    </div>
-  </figure>
-     
-    <div class="slide-container">
-      <div class="slide fade">
-        <img src="images/img-slide-wedding-couple.jpg" alt=''>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="highlight-icon">🏛️</span>
+              <h3>KET</h3>
+              <p>Digital Product Manager &amp; Web Developer II since 2021.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🎨</span>
+              <h3>Design &amp; Dev</h3>
+              <p>Full product lifecycle from UX concept to shipped code.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🤖</span>
+              <h3>AI-Powered</h3>
+              <p>Using AI as a real tool in design, dev, and product work.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">📍</span>
+              <h3>Louisville, KY</h3>
+              <p>Available for in-person collaboration and client work.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-social">
+          <a href="https://www.linkedin.com/in/jesse-daniels/" target="_blank" rel="noopener" class="btn-social btn-linkedin" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/jessecdaniels" target="_blank" rel="noopener" class="btn-social btn-github" aria-label="GitHub"><i class="fa fa-github-alt"></i></a>
+          <a href="mailto:jdanielsstudio@gmail.com" class="btn-social btn-email" aria-label="Email"><i class="fa fa-envelope"></i></a>
+          <a href="Jesse-Daniels-Resume.pdf" target="_blank" class="btn-social btn-resume" aria-label="Download Resume"><i class="fa fa-download"></i></a>
+        </div>
       </div>
-      <div class="slide fade">
-        <img src="images/img-slide-wedding-dance.jpg" alt=''>
-      </div>
-      <div class="slide fade">
-        <img src="images/img-slide-louisville-blur.jpg" alt=''>
-      </div>
-      <div class="slide fade">
-        <img src="images/img-slide-jessica.jpg" alt=''>
-      </div>
-      <div class="slide fade">
-        <img src="images/img-slide-lexington.jpg" alt=''>
-      </div>
-      <div class="slide fade">
-        <img src="images/img-slide-seattle.jpg" alt=''>
-      </div>
+    </section>
 
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <h2 class="section-title" data-heading="Experience">Experience</h2>
 
-      <a class="prev" title="Previous">&#10094;</a>
-      <a class="next" title="Next">&#10095;</a>
+        <div class="timeline">
 
-    </div>
-    
-    <div class="dots-container">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-<h1>Other Jesse Stuff</h1>
-    <figure>
-    <div class="horoback"><p class="horobio">Many of us have fond memories of mom baking sweet apple pies or smoking endless Virginia Slims. I have those memories too, but one of my fondest memories is my mom religiously reading her horoscope aloud. I built this horoscope feature so you can check yours daily!</p>
-      <img class="chart" src="images/Zodiac-Signs-List-with-Dates-Symbols.jpg" alt="Zoidac signs chart with dates">
-          <h3>"Horoscope Generator"</h3>
-          <div class="info-box">
-                  <div class="horoscope">
-                      <p></p>
-                        <select id="list"> 
-                          <option selected disabled>Choose One</option>
-                          <option value="aries">Aries &#9800;</option>
-                          <option value="taurus">Taurus &#9801;</option>
-                          <option value="gemini">Gemini &#9802;</option>
-                          <option value="cancer">Cancer &#9803;</option>
-                          <option value="leo">Leo &#9804;</option>
-                          <option value="virgo">Virgo &#9805;</option>
-                          <option value="libra">Libra &#9806;</option>
-                          <option value="scorpio">Scorpio &#9807;</option>
-                          <option value="sagittarius">Sagittarius &#9808;</option>
-                          <option value="capricorn">Capricorn &#9809;</option>
-                          <option value="aquarius">Aquarius &#9810;</option>
-                          <option value="pisces">Pisces &#9811;</option>
-                      </select>
-                  </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2021 &ndash; Present</span>
+              <span class="timeline-badge current">Current Role</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Digital Product Manager &amp; Web Developer II</h3>
+              <p class="timeline-org">Kentucky Education Television (KET)</p>
+              <ul class="timeline-bullets">
+                <li>Led the creation of <strong>Web Tools</strong>, KET's intranet platform — from naming and design through development — collaborating with production, education, graphics, and marketing teams</li>
+                <li>Spearheaded the redesign and launch of <strong>KET.org</strong> and the e-commerce platform <strong>Shop.KET.org</strong></li>
+                <li>Drive full product life cycles from concept through launch, ensuring alignment with organizational goals and stakeholder needs</li>
+                <li>Chosen as co-lead for the Marketing &amp; Web Development task force to improve cross-team collaboration</li>
+                <li>Develop and maintain custom WordPress, Moodle, &amp; SharePoint content management systems</li>
+              </ul>
+              <div class="ai-pilot-callout">
+                <span class="scholar-icon">🤖</span>
+                <div>
+                  <h4>KET AI Pilot Group &mdash; Web Team Representative</h4>
+                  <p>Representing the web team on KET's organization-wide AI pilot initiative — chartered to explore AI models and identify real applications across the organization. The web team had already been using AI for years; the mission was to bring the rest of the org along. Currently building a <strong>custom AI chatbot</strong> trained on KET's institutional knowledge: at minimum, it intelligently routes support tickets to the right department — at best, it answers questions outright and eliminates help tickets altogether.</p>
+                </div>
               </div>
-            </div> 
-  </figure>
+              <div class="scholar-week-callout">
+                <span class="scholar-icon">🎓</span>
+                <div>
+                  <h4>Scholar Week</h4>
+                  <p>Initiated and designed a recurring "Scholar Week" sprint rotation — a structured program giving the team dedicated time to learn, experiment, and bring new ideas back to the work. Built from scratch with no playbook, just a belief that teams that learn together build better things.</p>
+                </div>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">Product Ownership</span>
+                <span class="tag">Agile / Jira</span>
+                <span class="tag">HTML &amp; CSS</span>
+                <span class="tag">WordPress</span>
+                <span class="tag">WCAG / a11y</span>
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Stakeholder Mgmt</span>
+                <span class="tag">AI Pilot Lead</span>
+                <span class="tag">Chatbot Development</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2008 &ndash; 2021</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Business Owner &amp; Manager</h3>
+              <p class="timeline-org">Jesse Daniels Photography LLC</p>
+              <ul class="timeline-bullets">
+                <li>Founded and scaled a full-service production studio, overseeing sales, client relations, and project execution</li>
+                <li>Hired, trained, and managed a team of 14 employees while personally directing over 1,000 events</li>
+                <li>Built a reputation for exceptional client relationships, strategic planning, and creative problem-solving — sustaining growth for over a decade</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Team Leadership</span>
+                <span class="tag">Sales &amp; Client Relations</span>
+                <span class="tag">Brand Development</span>
+                <span class="tag">Project Management</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="education-row">
+          <div class="edu-card">
+            <span class="edu-icon">🎓</span>
+            <div>
+              <h4>Full-Stack Development Certificate</h4>
+              <p>Code Louisville &mdash; Louisville, KY</p>
+              <p class="edu-detail">15-month intensive bootcamp: Front-End Web Development (HTML, CSS, JavaScript), C#, and JavaScript</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <span class="edu-icon">🏛️</span>
+            <div>
+              <h4>Bachelor of Arts in Philosophy</h4>
+              <p>University of Evansville</p>
+              <p class="edu-detail">Emphasis in Technologies, Art, and Business. Foundation in critical thinking, ethical reasoning, and logical analysis.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title" data-heading="Projects">Projects</h2>
+        <p class="section-intro">Work that spans public broadcasting, accessibility, B2B tools, and beyond.</p>
+
+        <div class="projects-grid">
+
+          <!-- KET WEB TOOLS -->
+          <div class="project-card featured">
+            <div class="project-badge">KET &mdash; Featured</div>
+            <div class="project-visual gradient-green">
+              <span class="project-emoji">🛠️</span>
+            </div>
+            <div class="project-info">
+              <h3>Web Tools &mdash; KET Intranet Platform</h3>
+              <p>Led the full product lifecycle for KET's internal intranet platform — from naming and UX design through development and launch. Collaborated across production, education, graphics, and marketing teams to deliver tools that streamline organization-wide workflows.</p>
+              <div class="project-tags">
+                <span class="tag">Product Management</span>
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Web Development</span>
+                <span class="tag">Cross-Team Collab</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- KET.ORG REDESIGN -->
+          <div class="project-card featured">
+            <div class="project-badge">KET &mdash; Featured</div>
+            <div class="project-visual gradient-orange">
+              <span class="project-emoji">📺</span>
+            </div>
+            <div class="project-info">
+              <h3>KET.org Redesign &amp; Shop.KET.org</h3>
+              <p>Spearheaded the redesign and launch of KET.org, a major public broadcasting website, along with the e-commerce platform Shop.KET.org. Drove alignment across stakeholders and ensured WCAG accessibility compliance throughout.</p>
+              <div class="project-tags">
+                <span class="tag">Web Redesign</span>
+                <span class="tag">E-Commerce</span>
+                <span class="tag">WCAG / a11y</span>
+                <span class="tag">WordPress</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCESS INSIGHT GROUP -->
+          <div class="project-card featured">
+            <div class="project-badge">Featured</div>
+            <div class="project-visual gradient-purple">
+              <span class="project-emoji">♿</span>
+            </div>
+            <div class="project-info">
+              <h3>Access Insight Group</h3>
+              <p>A platform for organizations to evaluate, track, and improve accessibility across their digital products. Built with AI-assisted research and analysis tooling to surface insights faster than traditional audits allow.</p>
+              <div class="project-tags">
+                <span class="tag">Product Design</span>
+                <span class="tag">AI-Assisted</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Web App</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESELLERS TOOL -->
+          <div class="project-card featured">
+            <div class="project-badge">Featured</div>
+            <div class="project-visual gradient-blue">
+              <span class="project-emoji">🔄</span>
+            </div>
+            <div class="project-info">
+              <h3>Resellers Management Tool</h3>
+              <p>A custom B2B web application built to streamline reseller onboarding, tracking, and management workflows. Leveraged AI throughout development to ship features faster and build things that would have been out of reach before.</p>
+              <div class="project-tags">
+                <span class="tag">Web App</span>
+                <span class="tag">B2B</span>
+                <span class="tag">AI-Built</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SOCKS PLUS SANDALS -->
+          <div class="project-card">
+            <a href="http://www.socksplussandals.com/" target="_blank" rel="noopener">
+              <img src="images/cooldads-website-screen.jpg" alt="Socks Plus Sandals website for cool dads">
+            </a>
+            <div class="project-info">
+              <h3><a href="http://www.socksplussandals.com/" target="_blank" rel="noopener">Socks Plus Sandals</a></h3>
+              <p>A website for, you guessed it, COOL DADS. Built with HTML, CSS, and JavaScript for Code Louisville. If you rock Crocs with socks, this is your corner of the internet.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HEALTHY HEART -->
+          <div class="project-card">
+            <img src="images/ipad-healthy-heart-display.jpg" alt="Healthy Heart low sodium website on iPad">
+            <div class="project-info">
+              <h3>Healthy Heart</h3>
+              <p>My first responsive web project — built to showcase HTML and CSS skills from Code Louisville. A site highlighting favorite low-sodium products that taught me the fundamentals of responsive design.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- C# JOURNAL -->
+          <div class="project-card">
+            <img src="images/Csharp-project-jesse-daniels.jpg" alt="C# Memory Journal desktop app">
+            <div class="project-info">
+              <h3>Memory Journal App (C#)</h3>
+              <p>A .NET C# desktop application for journaling memories of my daughters growing up. Features search, delete, and a "one year ago today" display mode.</p>
+              <div class="project-tags">
+                <span class="tag">C#</span>
+                <span class="tag">.NET</span>
+                <span class="tag">Desktop App</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAM -->
+          <div class="project-card">
+            <a href="http://www.bamsocialphotobooth.com/" target="_blank" rel="noopener">
+              <img src="images/BAM_Logo_Pink.jpg" alt="BAM Social Photo Booth branding">
+            </a>
+            <div class="project-info">
+              <h3><a href="http://www.bamsocialphotobooth.com/" target="_blank" rel="noopener">BAM Social Photo Booth</a></h3>
+              <p>A brand built from the ground up — logo designed in Photoshop, website built in WordPress. Created an attention-grabbing identity for my photo booth rental business.</p>
+              <div class="project-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">WordPress</span>
+                <span class="tag">Photoshop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NEON PHOTO CO -->
+          <div class="project-card">
+            <a href="http://www.neonphotoco.com/" target="_blank" rel="noopener">
+              <img src="images/neon-photo-co-website-phone-display.jpg" alt="Neon Photo Co website on phone">
+            </a>
+            <div class="project-info">
+              <h3><a href="http://www.neonphotoco.com/" target="_blank" rel="noopener">Neon Photo Co</a></h3>
+              <p>A WordPress website built to advertise my commercial photography studio and portfolio. Designed for clean presentation of professional photography work across all devices.</p>
+              <div class="project-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">Photography</span>
+                <span class="tag">Portfolio</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <h2 class="section-title" data-heading="Skills">Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <div class="skill-category-icon">📋</div>
+            <h3>Product &amp; Project Management</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Product Ownership &amp; Roadmapping</span>
+              <span class="skill-tag">Agile Methodology</span>
+              <span class="skill-tag">Jira &amp; Confluence</span>
+              <span class="skill-tag">Stakeholder Presentations</span>
+              <span class="skill-tag">Cross-Functional Leadership</span>
+              <span class="skill-tag">User Stories &amp; Requirements</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-icon">💻</div>
+            <h3>Technical Development &amp; Design</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5 &amp; CSS3 / Sass</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">UX/UI Design</span>
+              <span class="skill-tag">WCAG &amp; Web Accessibility</span>
+              <span class="skill-tag">Adobe Creative Suite</span>
+              <span class="skill-tag">WordPress &amp; Moodle</span>
+              <span class="skill-tag">C# / .NET</span>
+              <span class="skill-tag">Git &amp; GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-category highlight">
+            <div class="skill-category-icon">🤖</div>
+            <h3>AI &amp; Workflow Innovation</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Claude AI</span>
+              <span class="skill-tag">ChatGPT</span>
+              <span class="skill-tag">AI-Assisted Development</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">AI Design Tools</span>
+              <span class="skill-tag">Process Innovation</span>
+              <span class="skill-tag">Team Enablement</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-icon">🤝</div>
+            <h3>Business &amp; Client Relations</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Full-Cycle Sales</span>
+              <span class="skill-tag">Client Strategy</span>
+              <span class="skill-tag">Compelling Presentations</span>
+              <span class="skill-tag">Strategic Partnerships</span>
+              <span class="skill-tag">Business Ownership</span>
+              <span class="skill-tag">Team Management (14 people)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PHOTOGRAPHY ===================== -->
+    <section class="photography-section" id="photography">
+      <div class="container">
+        <h2 class="section-title" data-heading="Photography">Photography</h2>
+        <div class="photo-intro">
+          <div class="photo-text">
+            <p>Since the summer following my college graduation I've been a professional photographer. I founded and scaled a full-service production studio, directing over <strong>1,000 events</strong> and building a reputation for exceptional work over more than a decade. The business acumen I built there is exactly what I bring to product and technology work today.</p>
+          </div>
+          <img class="collage" src="images/jesse-collage.png" alt="Jesse Daniels working as a photographer">
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide fade">
+          <img src="images/img-slide-wedding-couple.jpg" alt="Wedding couple portrait">
+        </div>
+        <div class="slide fade">
+          <img src="images/img-slide-wedding-dance.jpg" alt="Wedding first dance">
+        </div>
+        <div class="slide fade">
+          <img src="images/img-slide-louisville-blur.jpg" alt="Louisville cityscape at dusk">
+        </div>
+        <div class="slide fade">
+          <img src="images/img-slide-jessica.jpg" alt="Portrait session">
+        </div>
+        <div class="slide fade">
+          <img src="images/img-slide-lexington.jpg" alt="Lexington Kentucky">
+        </div>
+        <div class="slide fade">
+          <img src="images/img-slide-seattle.jpg" alt="Seattle skyline">
+        </div>
+        <a class="prev" title="Previous slide">&#10094;</a>
+        <a class="next" title="Next slide">&#10095;</a>
+      </div>
+
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- ===================== JESSE STUFF / HOROSCOPE ===================== -->
+    <section class="fun-section" id="fun">
+      <div class="container">
+        <h2 class="section-title" data-heading="Jesse Stuff">Jesse Stuff</h2>
+        <div class="horoscope-wrap">
+          <div class="horoscope-text">
+            <p>Many of us have fond memories of mom baking sweet apple pies or smoking endless Virginia Slims. I have those memories too, but one of my fondest is my mom religiously reading her horoscope aloud every morning. I built this feature so you can check yours daily!</p>
+            <div class="info-box">
+              <div class="horoscope">
+                <select id="list">
+                  <option selected disabled>Choose Your Sign</option>
+                  <option value="aries">Aries &#9800;</option>
+                  <option value="taurus">Taurus &#9801;</option>
+                  <option value="gemini">Gemini &#9802;</option>
+                  <option value="cancer">Cancer &#9803;</option>
+                  <option value="leo">Leo &#9804;</option>
+                  <option value="virgo">Virgo &#9805;</option>
+                  <option value="libra">Libra &#9806;</option>
+                  <option value="scorpio">Scorpio &#9807;</option>
+                  <option value="sagittarius">Sagittarius &#9808;</option>
+                  <option value="capricorn">Capricorn &#9809;</option>
+                  <option value="aquarius">Aquarius &#9810;</option>
+                  <option value="pisces">Pisces &#9811;</option>
+                </select>
+                <p class="horoscope-result"></p>
+              </div>
+            </div>
+          </div>
+          <img class="chart" src="images/Zodiac-Signs-List-with-Dates-Symbols.jpg" alt="Zodiac signs chart with dates and symbols">
+        </div>
+      </div>
+    </section>
+
   </main>
-  
-  <footer>
-    <p>&copy;2021 Jesse Daniels Portfolio</p>
+
+  <!-- ===================== FOOTER / CONTACT ===================== -->
+  <footer id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+      <p class="footer-sub">Based in Louisville, KY &mdash; open to new opportunities</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/jesse-daniels/" target="_blank" rel="noopener" class="btn-social btn-linkedin" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/jessecdaniels" target="_blank" rel="noopener" class="btn-social btn-github" aria-label="GitHub"><i class="fa fa-github-alt"></i></a>
+        <a href="mailto:jdanielsstudio@gmail.com" class="btn-social btn-email" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        <a href="Jesse-Daniels-Resume.pdf" target="_blank" class="btn-social btn-resume" aria-label="Download Resume"><i class="fa fa-download"></i></a>
+      </div>
+      <a href="mailto:jdanielsstudio@gmail.com" class="btn-contact-lg">Send Me an Email</a>
+      <p class="copyright">&copy;2025 Jesse Daniels</p>
+    </div>
   </footer>
 
 </body>

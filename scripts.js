@@ -1,137 +1,106 @@
 // ----------------------------------------------------------------
-// Daily Greeting In Header (Array)
+// Daily Greeting in Hero
 // ----------------------------------------------------------------
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const day = days[new Date().getDay()];
+const greetingEl = document.getElementById('greeting');
+if (greetingEl) greetingEl.textContent = `Happy ${day}!`;
 
-const daysofweek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const dayindex = (new Date()).getDay();
-const day = daysofweek[dayindex];
 
-document.querySelector("header p").textContent=`Happy ${day}!`;
+// ----------------------------------------------------------------
+// Mobile Nav Toggle
+// ----------------------------------------------------------------
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
 
 
 // ----------------------------------------------------------------
 // Photography Slideshow
 // ----------------------------------------------------------------
-
 let currentSlide = 0;
-const slides = document.querySelectorAll(".slide")
-const dots = document.querySelectorAll('.dot')
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
 
-const init = (n) => {
-  slides.forEach((slide, index) => {
-    slide.style.display = "none"
-    dots.forEach((dot, index) => {
-      dot.classList.remove("active")
-    })
-  })
-  slides[n].style.display = "block"
-  dots[n].classList.add("active")
-}
-document.addEventListener("DOMContentLoaded", init(currentSlide))
-const next = () => {
-  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
-  init(currentSlide)
+function showSlide(n) {
+  slides.forEach(s => s.style.display = 'none');
+  dots.forEach(d => d.classList.remove('active'));
+  if (slides[n]) slides[n].style.display = 'block';
+  if (dots[n]) dots[n].classList.add('active');
 }
 
-const prev = () => {
-  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
-  init(currentSlide)
+document.addEventListener('DOMContentLoaded', () => showSlide(currentSlide));
+
+function nextSlide() {
+  currentSlide = currentSlide >= slides.length - 1 ? 0 : currentSlide + 1;
+  showSlide(currentSlide);
 }
 
-document.querySelector(".next").addEventListener('click', next)
+function prevSlide() {
+  currentSlide = currentSlide <= 0 ? slides.length - 1 : currentSlide - 1;
+  showSlide(currentSlide);
+}
 
-document.querySelector(".prev").addEventListener('click', prev)
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
-
-setInterval(() => {
-  next()
-}, 5000);
+setInterval(nextSlide, 5000);
 
 dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    console.log(currentSlide)
-    init(i)
-    currentSlide = i
-  })
-})
-
-
-// -----------------------------------------------------------------------------------
-// Spotify API | My Last Played Song
-// going to come back to working on this when Spotify decides to play nicer with devs
-// -----------------------------------------------------------------------------------
-
-// const songDiv = document.querySelector(".figure .song p");
-
-// document.addEventListener("DOMContentLoaded", getSong);
-
-// async function getSong() {
-//     const songData = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=1", {
-//         headers: {
-//             Accept: "application/json"
-//         }
-//     });
-//     const songObj = await songData.json();
-//     songDiv.innerHTML = songObj.song;
-//     console.log(songData);
-
+  dot.addEventListener('click', () => {
+    currentSlide = i;
+    showSlide(currentSlide);
+  });
+});
 
 
 // ----------------------------------------------------------------
-// Horoscope Feature (API Call)
+// Word Count on Bio
 // ----------------------------------------------------------------
+const bioEl = document.querySelector('.bio');
+const wordcountEl = document.getElementById('wordcount');
+
+if (bioEl && wordcountEl) {
+  const text = bioEl.textContent || '';
+  const count = text.trim().split(/\s+/).filter(w => w.length > 0).length;
+  wordcountEl.textContent = `** Fun fact: this bio contains ${count} words, according to my JavaScript word counter **`;
+}
 
 
-const horoscopeDiv = document.querySelector(".info-box .horoscope p");
+// ----------------------------------------------------------------
+// Horoscope Feature
+// Uses horoscope-app-api.vercel.app (free, no key required)
+// ----------------------------------------------------------------
+const horoscopeSelect = document.getElementById('list');
+const horoscopeResult = document.querySelector('.horoscope-result');
 
-document.querySelector("#list").addEventListener("change", getHoroscope);
+if (horoscopeSelect && horoscopeResult) {
+  horoscopeSelect.addEventListener('change', getHoroscope);
+}
 
 async function getHoroscope() {
-  const sunsign = document.querySelector("#list").value;
-    const horoscopeData = await fetch(`https://aztro.sameerkumar.website/?sign=${sunsign}&day=today`, 
-    { method: 'POST' });
+  const sign = horoscopeSelect.value;
+  horoscopeResult.textContent = 'Reading the stars...';
 
-    const horoscopeObj = await horoscopeData.json();
-    horoscopeDiv.innerHTML = horoscopeObj.description;
-    console.log(horoscopeObj);
+  try {
+    const res = await fetch(
+      `https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=${sign}&day=today`
+    );
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    horoscopeResult.textContent = data?.data?.horoscope_data || 'The stars are quiet today. Try again later.';
+  } catch {
+    horoscopeResult.textContent = 'Could not load horoscope right now. The cosmos are mysterious like that.';
+  }
 }
-
-
-
-// ----------------------------------------------------------------
-// Word Count: Count and return the number of words in my bio
-// ----------------------------------------------------------------
-
-var wordsInPost = wordCount(document.querySelectorAll(".bio"));
-
-function wordCount(words) {
-	var count = 0;
-	for (var i = 0; i < words.length; i++) {
-		count += words[i].textContent.split(' ').length;
-    count =`<p>**You may be interested to know this bio contains ${count} words, according to my JavaScript word counter**</p>`;
-    document.querySelector("#wordcount").innerHTML = count;
-
-	}
-	return count;
-}
-
-// horoscope works for project but not hosted due to https error:
-
-// const horoscopeDiv = document.querySelector(".info-box .horoscope p");
-
-// // document.addEventListener("DOMContentLoaded", getHoroscope); 
-// // used this to auto load horoscope before I added the select option
-
-// document.querySelector("#list").addEventListener("change", getHoroscope);
-
-// async function getHoroscope() {
-//   const sunsign = document.querySelector("#list").value;
-//     const horoscopeData = await fetch(`http://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`, {
-//         headers: {
-//             Accept: "application/json"
-//         }
-//     });
-//     const horoscopeObj = await horoscopeData.json();
-//     horoscopeDiv.innerHTML = horoscopeObj.horoscope;
-//     console.log(horoscopeObj);
-// }
