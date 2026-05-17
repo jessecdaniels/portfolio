@@ -842,6 +842,65 @@ a {
   display: block;
 }
 
+.ket-card {
+  grid-column: 1 / -1;
+}
+
+.ket-card-inner {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.ket-logo-panel {
+  flex-shrink: 0;
+  width: 180px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ket-logo-panel img {
+  width: 100%;
+  display: block;
+}
+
+.ket-card .project-info {
+  flex: 1;
+}
+
+.ket-role {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--pink);
+  display: block;
+  margin-top: 2px;
+}
+
+.ket-highlights {
+  margin: 10px 0 12px 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.ket-highlights li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .ket-card-inner {
+    flex-direction: column;
+  }
+  .ket-logo-panel {
+    width: 100%;
+  }
+}
+
 .project-screenshot {
   overflow: hidden;
   padding: 0;
