@@ -817,6 +817,23 @@ a {
   object-fit: cover;
 }
 
+.bam-logo {
+  object-fit: contain;
+  background: #1a1a2e;
+  padding: 24px;
+}
+
+.fun-fact {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(249, 140, 164, 0.08);
+  border-left: 3px solid var(--red);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 16px;
+  font-style: italic;
+}
+
 .project-card.featured {
   border: 2px solid var(--red);
 }
