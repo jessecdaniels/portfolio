@@ -830,6 +830,31 @@ a {
   background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
+.ket-logo-visual {
+  background: #fff;
+  padding: 24px;
+}
+
+.ket-logo-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.project-screenshot {
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
 .gradient-blue {
   background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
 }
